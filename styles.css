@@ -1,0 +1,85 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+    background: linear-gradient(to right, #1D2671, #C33764); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh; 
+}
+
+.clock{
+    width:500px;
+    height:500px;
+    border-radius:  50%;
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+    background: linear-gradient(to right, #1D2671, #C33764); 
+    box-shadow: 2px 2px 10px 8px rgba(22, 45, 75, 0.92); 
+    
+}
+
+.clock:hover{
+    box-shadow: 2px 2px 10px 8px  #db14a0;
+    cursor:pointer;
+}
+
+.clock::before{
+    content: '';
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px 3px rgba(22, 45, 75, 0.92);
+    background: linear-gradient(to right, #c04848,#480048);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+   
+}
+
+
+.hand {
+    
+    background: linear-gradient(to right, #c04848,#480048); 
+    box-shadow: 1px 1px 1px 1px rgba(22, 45, 75, 0.92); 
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate();
+    transform-origin: bottom;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+   
+}
+
+.hour {
+    width: 9px;
+    height: 21%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.minute {
+    width: 9px;
+    height: 28%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.second {
+    width: 4px;
+    height: 30%;
+    transform: translateX(-50%) rotate(180deg);
+    
+}
+
+
+ 
+  
+
